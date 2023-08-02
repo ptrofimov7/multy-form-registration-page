@@ -9,21 +9,60 @@ import { ReactComponent as ArrowSquareLeft } from '../app/assets/icons/arrow_squ
 import Aside from '../components/Aside/Aside';
 import { confirmPhoneSendSmsAsync, createProfileAsync, selectUserData} from '../redux/slices';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-//import { IMaskInput } from 'react-imask';
 import { MuiInput, Select } from '../app/ui-components';
 import InputMask from 'react-input-mask';
-
+import { MuiInput, Select } from '../app/ui-components';
 
 interface CustomInputMaskProps {
    mask: string;
    maskChar: string
-   // Add other props specific to your use case
  }
 
  const CustomInputMask: React.FC<CustomInputMaskProps> = ({ mask, maskChar, ...rest }) => {
    return <InputMask mask={mask} maskChar={maskChar} {...rest} />;
  };
 
+interface CustomProps {
+   onChange: (event: { target: { name: string; value: string } }) => void;
+   name: string;
+}
+
+const TelephoneMaskCustom = React.forwardRef<HTMLElement, CustomProps>(
+   function TextMaskCustom(props, ref) {
+      const { onChange, ...other } = props;
+      return (
+         <IMaskInput
+            {...other}
+            mask="+38 (000) 000 00 00"
+            definitions={{
+               '#': /[1-9]/,
+            }}
+            inputRef={ref}
+            onAccept={(value: any) => onChange({ target: { name: props.name, value } })}
+            overwrite
+         />
+      );
+   },
+);
+
+const DateMaskCustom = React.forwardRef<HTMLElement, CustomProps>(
+   function TextMaskCustom(props, ref) {
+      const { onChange, ...other } = props;
+      return (
+         <IMaskInput
+            {...other}
+            mask="0000-00-00"
+            definitions={{
+               '#': /[1-9]/,
+            }}
+            inputRef={ref}
+            onAccept={(value: any) => onChange({ target: { name: props.name, value } })}
+            overwrite
+         />
+      );
+   },
+);
+>>>>>>> a6d2d4bd834b9438926c56ef61d690069469b7a3
 
 const schema = z.object({
    sname: z.string().nonempty('Фамилия - обязательное поле!'),
