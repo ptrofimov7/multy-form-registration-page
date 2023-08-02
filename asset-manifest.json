@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/multy-form-registration-page/static/css/main.a5f6c614.css",
+    "main.js": "/multy-form-registration-page/static/js/main.6f8ac1f3.js",
+    "static/js/787.338366e2.chunk.js": "/multy-form-registration-page/static/js/787.338366e2.chunk.js",
+    "static/media/bg-image-aside.svg": "/multy-form-registration-page/static/media/bg-image-aside.4b4d6a00a88b0d84aaf4b33ee5da0884.svg",
+    "static/media/icon_circle-close-filled.svg": "/multy-form-registration-page/static/media/icon_circle-close-filled.64bbc4f7181f713081e92fd6e21d2f9a.svg",
+    "index.html": "/multy-form-registration-page/index.html",
+    "static/media/google.svg": "/multy-form-registration-page/static/media/google.0514b50b7e356fee663eb7ba4fe5c13f.svg",
+    "static/media/timer.svg": "/multy-form-registration-page/static/media/timer.96c77a13f55d9ab79e34aa4039cdf4b6.svg",
+    "static/media/linkedin.svg": "/multy-form-registration-page/static/media/linkedin.64c4cd33950a736e7eff58f40d6be078.svg",
+    "static/media/icon_key-fill.svg": "/multy-form-registration-page/static/media/icon_key-fill.20db9cf9f4cad9f6860e63ffc0e22430.svg",
+    "static/media/icon_eye-close.svg": "/multy-form-registration-page/static/media/icon_eye-close.3dfa5f1f4c7fe40f9d977bac1cfac7cd.svg",
+    "static/media/icon_eye.svg": "/multy-form-registration-page/static/media/icon_eye.3df6c6d570b22cd2d58594c25b6eb65d.svg",
+    "static/media/facebook.svg": "/multy-form-registration-page/static/media/facebook.ae650b552e5ff4fbd52260a7893cfbe6.svg",
+    "static/media/arrow_square-left.svg": "/multy-form-registration-page/static/media/arrow_square-left.e6afc63aa68bca249fb50299f14f7418.svg",
+    "static/media/tick_square-light.svg": "/multy-form-registration-page/static/media/tick_square-light.e76dba7a09cb702ff74ef4899e2e700b.svg",
+    "static/media/arrow_cycle.svg": "/multy-form-registration-page/static/media/arrow_cycle.fd3d2331e6a34f9ad12dd984dbf126a5.svg",
+    "static/media/content.svg": "/multy-form-registration-page/static/media/content.cf59d0c6b5e659ff91d37f6afb898b4a.svg",
+    "static/media/getFetch.cjs": "/multy-form-registration-page/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "static/media/close.svg": "/multy-form-registration-page/static/media/close.b03a254158d9c175227fe328636cdd30.svg",
+    "main.a5f6c614.css.map": "/multy-form-registration-page/static/css/main.a5f6c614.css.map",
+    "main.6f8ac1f3.js.map": "/multy-form-registration-page/static/js/main.6f8ac1f3.js.map",
+    "787.338366e2.chunk.js.map": "/multy-form-registration-page/static/js/787.338366e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5f6c614.css",
+    "static/js/main.6f8ac1f3.js"
+  ]
+}
