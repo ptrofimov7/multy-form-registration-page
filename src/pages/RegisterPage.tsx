@@ -9,7 +9,7 @@ import { ReactComponent as ArrowSquareLeft } from '../app/assets/icons/arrow_squ
 import Aside from '../components/Aside/Aside';
 import { confirmPhoneSendSmsAsync, createProfileAsync, selectUserData} from '../redux/slices';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-//import { IMaskInput } from 'react-imask';
+
 import { MuiInput, Select } from '../app/ui-components';
 import InputMask from 'react-input-mask';
 
@@ -23,7 +23,6 @@ interface CustomInputMaskProps {
  const CustomInputMask: React.FC<CustomInputMaskProps> = ({ mask, maskChar, ...rest }) => {
    return <InputMask mask={mask} maskChar={maskChar} {...rest} />;
  };
-
 
 const schema = z.object({
    sname: z.string().nonempty('Фамилия - обязательное поле!'),
