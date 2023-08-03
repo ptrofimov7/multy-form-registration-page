@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/multy-form-registration-page/static/css/main.a5f6c614.css",
-    "main.js": "/multy-form-registration-page/static/js/main.3efa5574.js",
+    "main.js": "/multy-form-registration-page/static/js/main.aa23523c.js",
     "static/js/787.338366e2.chunk.js": "/multy-form-registration-page/static/js/787.338366e2.chunk.js",
     "static/media/bg-image-aside.svg": "/multy-form-registration-page/static/media/bg-image-aside.4b4d6a00a88b0d84aaf4b33ee5da0884.svg",
     "static/media/icon_circle-close-filled.svg": "/multy-form-registration-page/static/media/icon_circle-close-filled.64bbc4f7181f713081e92fd6e21d2f9a.svg",
@@ -20,11 +20,11 @@
     "static/media/getFetch.cjs": "/multy-form-registration-page/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/close.svg": "/multy-form-registration-page/static/media/close.b03a254158d9c175227fe328636cdd30.svg",
     "main.a5f6c614.css.map": "/multy-form-registration-page/static/css/main.a5f6c614.css.map",
-    "main.3efa5574.js.map": "/multy-form-registration-page/static/js/main.3efa5574.js.map",
+    "main.aa23523c.js.map": "/multy-form-registration-page/static/js/main.aa23523c.js.map",
     "787.338366e2.chunk.js.map": "/multy-form-registration-page/static/js/787.338366e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5f6c614.css",
-    "static/js/main.3efa5574.js"
+    "static/js/main.aa23523c.js"
   ]
 }
