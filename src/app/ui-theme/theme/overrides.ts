@@ -65,15 +65,15 @@ const overrides = {
           padding: "10px 8px 10px 16px",
         },
 
-        "& input:not([disabled]):hover": {
+        "&:hover": {
           border: '1px solid rgba(78, 90, 242, 1)',
         },
 
-        "& input:not([disabled]):focus": {
+        "&:focus-within": {
           border: '2px solid rgba(56, 67, 237, 1)',
         },
 
-        "& .Mui-disabled": {
+        "&:disabled": {
           border: '1px solid rgba(203, 213, 226, 1)',
           color:  palette.primary.gray,
           backgroundColor:  palette.primary.extralight,
@@ -142,7 +142,7 @@ const overrides = {
           fontSize: '12px',
           lineHeight: '2',
         },
-        '& input.Mui-disabled': {
+        '& .MuiInput-root.Mui-disabled': {
           border: '1px solid rgba(203, 213, 226, 1)',
           color:  palette.primary.gray,
           backgroundColor:  palette.primary.extralight,
