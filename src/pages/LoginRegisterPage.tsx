@@ -50,6 +50,7 @@ const socialIcons = [
   Facebook,
   LinkedIn
 ]
+console.log({ ENV: process.env.NODE_ENV});
 
 const REDIRECT_URL = process.env.NODE_ENV  === 'production' ? 'https://multy-form-registration-page-b1so.vercel.app/registration' : 'http://localhost:3000/registration'
 
