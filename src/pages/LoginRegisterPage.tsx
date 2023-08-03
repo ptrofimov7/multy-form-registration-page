@@ -51,7 +51,7 @@ const socialIcons = [
   LinkedIn
 ]
 
-const REDIRECT_URL = process.env.mode === 'production' ? 'http://localhost:3000/registration' : 'http://localhost:3000/registration'
+const REDIRECT_URL = process.env.mode === 'production' ? 'https://multy-form-registration-page-b1so.vercel.app/registration' : 'http://localhost:3000/registration'
 
 export const LoginPegisterPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState({
