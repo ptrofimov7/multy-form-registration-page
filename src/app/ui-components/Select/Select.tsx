@@ -13,9 +13,10 @@ type MuiSelectProps = {
    field?: Record<string, any>,
    error?: boolean,
    message?: string,
+   defaultValue?: any,
 }
 
-const MuiSelect = ({ id, data, label, value, onChange, sx, disabled = false, field, placeholder = '', required = true, error = false, message = '' }: MuiSelectProps) => {
+const MuiSelect = ({ id, data, label, value, defaultValue, onChange, sx, disabled = false, field, placeholder = '', required = true, error = false, message = '' }: MuiSelectProps) => {
    return (
       <>
         <label htmlFor={id}>{label}{required && <sup style={{color: 'red'}}>*</sup>}</label>
@@ -30,6 +31,7 @@ const MuiSelect = ({ id, data, label, value, onChange, sx, disabled = false, fie
                onChange(e.target.value)
             }}
             {...field}
+            defaultValue={defaultValue}
          >
             {
                data.map(el => {

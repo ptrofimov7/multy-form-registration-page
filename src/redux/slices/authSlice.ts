@@ -69,7 +69,7 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     setAuthData: (state, action: PayloadAction<AuthPayloadData>) => {
-      state.user_data = { ...state.user_data, ...(action.payload || {}) }
+      state.user_data = { ...state.user_data, ...(action.payload.user_data || {}) }
     },
     clearAuthData: (state) => {
       state.user_data = initialState.user_data

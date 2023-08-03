@@ -7,7 +7,7 @@ import { Close } from '@mui/icons-material';
 import { ReactComponent as RedCircleIcon } from '../app/assets/icons/icon_circle-close-filled.svg'
 import { ReactComponent as ArrowSquareLeft } from '../app/assets/icons/arrow_square-left.svg'
 import Aside from '../components/Aside/Aside';
-import { confirmPhoneSendSmsAsync, createProfileAsync, selectUserData} from '../redux/slices';
+import { confirmPhoneSendSmsAsync, createProfileAsync, selectUserData, setAuthData } from '../redux/slices';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 import { MuiInput, Select } from '../app/ui-components';
@@ -18,11 +18,11 @@ interface CustomInputMaskProps {
    mask: string;
    maskChar: string
    // Add other props specific to your use case
- }
+}
 
- const CustomInputMask: React.FC<CustomInputMaskProps> = ({ mask, maskChar, ...rest }) => {
+const CustomInputMask: React.FC<CustomInputMaskProps> = ({ mask, maskChar, ...rest }) => {
    return <InputMask mask={mask} maskChar={maskChar} {...rest} />;
- };
+};
 
 const schema = z.object({
    sname: z.string().nonempty('Фамилия - обязательное поле!'),
@@ -42,14 +42,13 @@ const GENDERS = [
 type FormSchema = z.infer<typeof schema>
 export const RegisterPage: React.FC = () => {
 
-   const initialData = useAppSelector(selectUserData)
    const {
       control,
       register,
       handleSubmit,
       getValues,
       formState: { isDirty, isSubmitting, errors },
-   } = useForm<FormSchema>({ defaultValues: initialData })
+   } = useForm<FormSchema>()
    const [open, setOpen] = React.useState(false);
    const [serverError, setServerError] = useState<string>('')
    const dispatch = useAppDispatch()
@@ -87,7 +86,17 @@ export const RegisterPage: React.FC = () => {
          setServerError("Token or phone is empty")
          return
       }
+      const formData = {
+         user_data: {
+            name: getValues("name"),
+            lname: getValues("lname"),
+            sname: getValues("sname"),
+            birth_date: getValues("birth_date"),
+            gender_id: getValues('gender_id')
+         }
+      }
       try {
+         dispatch(setAuthData(formData))
          await dispatch(confirmPhoneSendSmsAsync({ token, phone })).unwrap()
          navigate('/confirmationphone')
       } catch (error: any) {
@@ -170,6 +179,7 @@ export const RegisterPage: React.FC = () => {
                                     message={errors.gender_id?.message || ''}
                                     {...field}
                                     data={GENDERS}
+                                    defaultValue={userData.gender_id}
                                  />)
                            }}
                         />
@@ -190,7 +200,7 @@ export const RegisterPage: React.FC = () => {
                            </InputAdornment>
                         }
                         inputComponent={CustomInputMask}
-                        inputProps={{mask: '+38 (099) 999 99 99', maskChar: ' '}}
+                        inputProps={{ mask: '+38 (099) 999 99 99', maskChar: ' ' }}
                         defaultValue={userData.phone}
                      />
                      <MuiInput
