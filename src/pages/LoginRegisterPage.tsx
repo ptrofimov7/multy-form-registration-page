@@ -52,7 +52,7 @@ const socialIcons = [
 ]
 console.log({ ENV: process.env.NODE_ENV});
 
-const REDIRECT_URL = process.env.NODE_ENV  === 'production' ? 'https://multy-form-registration-page-b1so.vercel.app/registration' : 'http://localhost:3000/registration'
+const REDIRECT_URL = process.env.NODE_ENV  === 'production' ? 'https://multy-form-registration-page-phnfcm2z6-ptrofimov7.vercel.app/registration' : 'http://localhost:3000/registration'
 
 export const LoginPegisterPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState({
