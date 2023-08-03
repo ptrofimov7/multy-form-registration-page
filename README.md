@@ -1,2 +1,2 @@
 Multy Form Registration Page
-gh-pages: https://ptrofimov7.github.io/multy-form-registration-page
+versel: https://multy-form-registration-page-b1so.vercel.app/
